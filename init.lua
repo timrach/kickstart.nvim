@@ -611,7 +611,15 @@ require('lazy').setup({
           end
         end,
       })
+      vim.lsp.config('ruff', {
+        init_options = {
+          settings = {
+            -- Ruff language server settings go here
+          },
+        },
+      })
 
+      vim.lsp.enable 'ruff'
       -- Diagnostic Config
       -- See :help vim.diagnostic.Opts
       vim.diagnostic.config {
@@ -722,7 +730,6 @@ require('lazy').setup({
       }
     end,
   },
-
   { -- Autoformat
     'stevearc/conform.nvim',
     event = { 'BufWritePre' },
