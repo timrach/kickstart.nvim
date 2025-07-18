@@ -6,6 +6,14 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Oil)
 return {
   { 'tpope/vim-fugitive' },
   {
+    "sphamba/smear-cursor.nvim",
+    opts = {},
+  },
+  {
+    "karb94/neoscroll.nvim",
+    opts = {},
+  },
+  {
     'stevearc/oil.nvim',
     ---@module 'oil'
     ---@type oil.SetupOpts
